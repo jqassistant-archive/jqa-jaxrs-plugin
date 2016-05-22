@@ -9,7 +9,7 @@
     </parent>
 
     <groupId>com.buschmais.jqassistant.plugin</groupId>
-    <artifactId>jqassistant.plugin.jaxrs</artifactId>
+    <artifactId>jqa-jaxrs-plugin</artifactId>
 
     <build>
         <plugins>
