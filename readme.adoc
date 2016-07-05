@@ -1,0 +1,13 @@
+= jQAssistant Java Plugin
+
+This is the JAX RS Plugin of https://www.jqassistant.org[jQAssistant^].
+It enables jQAssistant to scan and to analyze JAX RS related
+artifacts like:
+
+- request method designators
+- resources
+- entity providers
+- ...
+
+
+For more information on jQAssistant see https://www.jqassistant.org[^].
