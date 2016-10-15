@@ -12,6 +12,14 @@
     <artifactId>jaxrs</artifactId>
     <version>1.2-SNAPSHOT</version>
 
+    <name>jQAssistant JAX RS Plugin</name>
+    <url>http://jqassistant.org/</url>
+
+    <description>
+        Plugin for jQAssistant to be able to scan and to
+        analyze JAX RS related artifacts.
+    </description>
+
     <organization>
         <name>buschmais GbR</name>
         <url>http://www.buschmais.com</url>
