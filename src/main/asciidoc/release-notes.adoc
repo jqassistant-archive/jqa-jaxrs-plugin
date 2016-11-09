@@ -1,0 +1,6 @@
+
+= jQAssistant JAX RS Plugin Release Notes
+
+include::1.2.adoc[]
+
+
