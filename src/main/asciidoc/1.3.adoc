@@ -1,0 +1,3 @@
+== jQAssistant JAX RS Plugin Version 1.3
+
+- TBW
