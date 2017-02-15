@@ -1,4 +1,5 @@
-== jQAssistant JAX RS Plugin Version 1.2
+ifndef::jqa-in-manual[== Version 1.2]
+ifdef::jqa-in-manual[== JAX RS Plugin 1.2]
 
 - Maven coordinates changed from `com.buschmais.jqassistant.plugin:jqassistant.plugin.jaxrs`
   to `com.buschmais.jqassistant.plugin:jaxrs`.
