@@ -5,11 +5,8 @@ import static com.buschmais.jqassistant.plugin.java.test.matcher.MethodDescripto
 import static org.hamcrest.CoreMatchers.*;
 import static org.junit.Assert.assertThat;
 
-import java.io.IOException;
-
 import org.junit.Test;
 
-import com.buschmais.jqassistant.core.analysis.api.AnalysisException;
 import com.buschmais.jqassistant.plugin.java.test.AbstractJavaPluginIT;
 import com.buschmais.jqassistant.plugin.jaxrs.test.set.beans.MyRestResource;
 
