@@ -12,17 +12,15 @@ import com.buschmais.jqassistant.plugin.jaxrs.test.set.beans.MyRestResource;
 
 /**
  * Test to verify JAX-RS Resource method concepts.
- * 
+ *
  * @author Aparna Chaudhary
  */
 public class ResourceMethodIT extends AbstractJavaPluginIT {
 
     /**
      * Verifies the concept {@code jaxrs:GetResourceMethod}.
-     * 
+     *
      * @throws java.io.IOException
-     *             If the test fails.
-     * @throws com.buschmais.jqassistant.core.analysis.api.AnalysisException
      *             If the test fails.
      * @throws NoSuchMethodException
      *             If the test fails.
@@ -39,10 +37,8 @@ public class ResourceMethodIT extends AbstractJavaPluginIT {
 
     /**
      * Verifies the concept {@code jaxrs:PutResourceMethod}.
-     * 
+     *
      * @throws java.io.IOException
-     *             If the test fails.
-     * @throws com.buschmais.jqassistant.core.analysis.api.AnalysisException
      *             If the test fails.
      * @throws NoSuchMethodException
      *             If the test fails.
@@ -59,10 +55,8 @@ public class ResourceMethodIT extends AbstractJavaPluginIT {
 
     /**
      * Verifies the concept {@code jaxrs:PostResourceMethod}.
-     * 
+     *
      * @throws java.io.IOException
-     *             If the test fails.
-     * @throws com.buschmais.jqassistant.core.analysis.api.AnalysisException
      *             If the test fails.
      * @throws NoSuchMethodException
      *             If the test fails.
@@ -79,10 +73,8 @@ public class ResourceMethodIT extends AbstractJavaPluginIT {
 
     /**
      * Verifies the concept {@code jaxrs:DeleteResourceMethod}.
-     * 
+     *
      * @throws java.io.IOException
-     *             If the test fails.
-     * @throws com.buschmais.jqassistant.core.analysis.api.AnalysisException
      *             If the test fails.
      * @throws NoSuchMethodException
      *             If the test fails.
@@ -99,10 +91,8 @@ public class ResourceMethodIT extends AbstractJavaPluginIT {
 
     /**
      * Verifies the concept {@code jaxrs:HeadResourceMethod}.
-     * 
+     *
      * @throws java.io.IOException
-     *             If the test fails.
-     * @throws com.buschmais.jqassistant.core.analysis.api.AnalysisException
      *             If the test fails.
      * @throws NoSuchMethodException
      *             If the test fails.
@@ -119,10 +109,8 @@ public class ResourceMethodIT extends AbstractJavaPluginIT {
 
     /**
      * Verifies the concept {@code jaxrs:OptionsResourceMethod}.
-     * 
+     *
      * @throws java.io.IOException
-     *             If the test fails.
-     * @throws com.buschmais.jqassistant.core.analysis.api.AnalysisException
      *             If the test fails.
      * @throws NoSuchMethodException
      *             If the test fails.
@@ -140,10 +128,8 @@ public class ResourceMethodIT extends AbstractJavaPluginIT {
 
     /**
      * Verifies the concept {@code jaxrs:SubResourceLocator}.
-     * 
+     *
      * @throws java.io.IOException
-     *             If the test fails.
-     * @throws com.buschmais.jqassistant.core.analysis.api.AnalysisException
      *             If the test fails.
      * @throws NoSuchMethodException
      *             If the test fails.
@@ -163,10 +149,8 @@ public class ResourceMethodIT extends AbstractJavaPluginIT {
     /**
      * Verifies the concept {@code jaxrs:SubResourceLocator} is not applied to
      * resource methods with entity parameters.
-     * 
+     *
      * @throws java.io.IOException
-     *             If the test fails.
-     * @throws com.buschmais.jqassistant.core.analysis.api.AnalysisException
      *             If the test fails.
      * @throws NoSuchMethodException
      *             If the test fails.

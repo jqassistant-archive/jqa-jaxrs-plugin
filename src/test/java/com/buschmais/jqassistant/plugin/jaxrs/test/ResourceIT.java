@@ -15,17 +15,15 @@ import com.buschmais.jqassistant.plugin.jaxrs.test.set.beans.MyRestResource;
 
 /**
  * Test to verify JAX-RS Resource concepts.
- * 
+ *
  * @author Aparna Chaudhary
  */
 public class ResourceIT extends AbstractJavaPluginIT {
 
     /**
      * Verifies the concept {@code jaxrs:Resource}.
-     * 
+     *
      * @throws java.io.IOException
-     *             If the test fails.
-     * @throws com.buschmais.jqassistant.core.analysis.api.AnalysisException
      *             If the test fails.
      * @throws NoSuchMethodException
      *             If the test fails.
@@ -43,10 +41,8 @@ public class ResourceIT extends AbstractJavaPluginIT {
     /**
      * Verifies the concept {@code jaxrs:Resource} is not applied to invalid
      * Resource classes.
-     * 
+     *
      * @throws java.io.IOException
-     *             If the test fails.
-     * @throws com.buschmais.jqassistant.core.analysis.api.AnalysisException
      *             If the test fails.
      * @throws NoSuchMethodException
      *             If the test fails.

@@ -15,7 +15,7 @@ import com.buschmais.jqassistant.plugin.jaxrs.test.set.beans.BookResolver;
 
 /**
  * Test to verify JAX-RS Context Provider concepts.
- * 
+ *
  * @author Aparna Chaudhary
  */
 public class ContextProviderIT extends AbstractJavaPluginIT {
@@ -23,10 +23,8 @@ public class ContextProviderIT extends AbstractJavaPluginIT {
     /**
      * Verifies the concept {@code jaxrs:ContextProvider} for
      * {@link ContextResolver}.
-     * 
+     *
      * @throws java.io.IOException
-     *             If the test fails.
-     * @throws com.buschmais.jqassistant.core.analysis.api.AnalysisException
      *             If the test fails.
      * @throws NoSuchMethodException
      *             If the test fails.

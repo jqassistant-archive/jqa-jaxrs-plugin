@@ -17,7 +17,7 @@ import com.buschmais.jqassistant.plugin.jaxrs.test.set.beans.BookWriter;
 
 /**
  * Test to verify JAX-RS Entity Provider concepts.
- * 
+ *
  * @author Aparna Chaudhary
  */
 public class EntityProviderIT extends AbstractJavaPluginIT {
@@ -25,10 +25,8 @@ public class EntityProviderIT extends AbstractJavaPluginIT {
     /**
      * Verifies the concept {@code jaxrs:EntityProvider} for
      * {@link MessageBodyWriter}.
-     * 
+     *
      * @throws java.io.IOException
-     *             If the test fails.
-     * @throws com.buschmais.jqassistant.core.analysis.api.AnalysisException
      *             If the test fails.
      * @throws NoSuchMethodException
      *             If the test fails.
@@ -46,10 +44,8 @@ public class EntityProviderIT extends AbstractJavaPluginIT {
     /**
      * Verifies the concept {@code jaxrs:EntityProvider} for
      * {@link MessageBodyReader}.
-     * 
+     *
      * @throws java.io.IOException
-     *             If the test fails.
-     * @throws com.buschmais.jqassistant.core.analysis.api.AnalysisException
      *             If the test fails.
      * @throws NoSuchMethodException
      *             If the test fails.

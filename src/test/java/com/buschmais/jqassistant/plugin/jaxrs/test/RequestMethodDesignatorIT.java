@@ -16,17 +16,15 @@ import com.buschmais.jqassistant.plugin.java.test.AbstractJavaPluginIT;
 
 /**
  * Test to verify JAX-RS Resource method designator concepts.
- * 
+ *
  * @author Aparna Chaudhary
  */
 public class RequestMethodDesignatorIT extends AbstractJavaPluginIT {
 
     /**
      * Verifies the concept {@code jaxrs:RequestMethodDesignator}.
-     * 
+     *
      * @throws java.io.IOException
-     *             If the test fails.
-     * @throws com.buschmais.jqassistant.core.analysis.api.AnalysisException
      *             If the test fails.
      * @throws NoSuchMethodException
      *             If the test fails.
@@ -60,10 +58,8 @@ public class RequestMethodDesignatorIT extends AbstractJavaPluginIT {
     /**
      * Verifies the concept {@code jaxrs:RequestMethodDesignator} is not applied
      * to invalid annotations.
-     * 
+     *
      * @throws java.io.IOException
-     *             If the test fails.
-     * @throws com.buschmais.jqassistant.core.analysis.api.AnalysisException
      *             If the test fails.
      * @throws NoSuchMethodException
      *             If the test fails.

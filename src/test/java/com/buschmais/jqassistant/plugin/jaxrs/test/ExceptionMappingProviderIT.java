@@ -15,7 +15,7 @@ import com.buschmais.jqassistant.plugin.jaxrs.test.set.beans.NotFoundExceptionMa
 
 /**
  * Test to verify JAX-RS Exception Mapping Provider concepts.
- * 
+ *
  * @author Aparna Chaudhary
  */
 public class ExceptionMappingProviderIT extends AbstractJavaPluginIT {
@@ -23,10 +23,8 @@ public class ExceptionMappingProviderIT extends AbstractJavaPluginIT {
     /**
      * Verifies the concept {@code jaxrs:ExceptionMappingProvider} for
      * {@link ExceptionMapper}.
-     * 
+     *
      * @throws java.io.IOException
-     *             If the test fails.
-     * @throws com.buschmais.jqassistant.core.analysis.api.AnalysisException
      *             If the test fails.
      * @throws NoSuchMethodException
      *             If the test fails.
