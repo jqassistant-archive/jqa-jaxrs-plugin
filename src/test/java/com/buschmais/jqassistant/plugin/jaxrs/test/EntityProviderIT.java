@@ -1,19 +1,19 @@
 package com.buschmais.jqassistant.plugin.jaxrs.test;
 
+import javax.ws.rs.ext.MessageBodyReader;
+import javax.ws.rs.ext.MessageBodyWriter;
+
+import com.buschmais.jqassistant.plugin.java.test.AbstractJavaPluginIT;
+import com.buschmais.jqassistant.plugin.jaxrs.test.set.beans.BookReader;
+import com.buschmais.jqassistant.plugin.jaxrs.test.set.beans.BookWriter;
+
+import org.junit.Test;
+
 import static com.buschmais.jqassistant.core.analysis.api.Result.Status.SUCCESS;
 import static com.buschmais.jqassistant.plugin.java.test.matcher.TypeDescriptorMatcher.typeDescriptor;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.hasItem;
 import static org.junit.Assert.assertThat;
-
-import javax.ws.rs.ext.MessageBodyReader;
-import javax.ws.rs.ext.MessageBodyWriter;
-
-import org.junit.Test;
-
-import com.buschmais.jqassistant.plugin.java.test.AbstractJavaPluginIT;
-import com.buschmais.jqassistant.plugin.jaxrs.test.set.beans.BookReader;
-import com.buschmais.jqassistant.plugin.jaxrs.test.set.beans.BookWriter;
 
 /**
  * Test to verify JAX-RS Entity Provider concepts.

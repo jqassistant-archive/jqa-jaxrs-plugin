@@ -1,6 +1,3 @@
-/**
- * 
- */
 package com.buschmais.jqassistant.plugin.jaxrs.test.set.beans;
 
 /**

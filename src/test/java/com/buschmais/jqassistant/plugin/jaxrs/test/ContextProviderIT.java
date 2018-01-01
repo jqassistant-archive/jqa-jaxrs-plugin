@@ -1,17 +1,17 @@
 package com.buschmais.jqassistant.plugin.jaxrs.test;
 
+import javax.ws.rs.ext.ContextResolver;
+
+import com.buschmais.jqassistant.plugin.java.test.AbstractJavaPluginIT;
+import com.buschmais.jqassistant.plugin.jaxrs.test.set.beans.BookResolver;
+
+import org.junit.Test;
+
 import static com.buschmais.jqassistant.core.analysis.api.Result.Status.SUCCESS;
 import static com.buschmais.jqassistant.plugin.java.test.matcher.TypeDescriptorMatcher.typeDescriptor;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.hasItem;
 import static org.junit.Assert.assertThat;
-
-import javax.ws.rs.ext.ContextResolver;
-
-import org.junit.Test;
-
-import com.buschmais.jqassistant.plugin.java.test.AbstractJavaPluginIT;
-import com.buschmais.jqassistant.plugin.jaxrs.test.set.beans.BookResolver;
 
 /**
  * Test to verify JAX-RS Context Provider concepts.

@@ -1,9 +1,9 @@
 package com.buschmais.jqassistant.plugin.jaxrs.test.set.beans;
 
-import static javax.ws.rs.core.Response.Status.NOT_FOUND;
-
 import javax.ws.rs.core.Response;
 import javax.ws.rs.ext.ExceptionMapper;
+
+import static javax.ws.rs.core.Response.Status.NOT_FOUND;
 
 /**
  * A simple exception mapper for {@link NotFoundException}
