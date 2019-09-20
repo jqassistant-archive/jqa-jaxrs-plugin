@@ -1,4 +1,4 @@
-= jQAssistant Java Plugin
+= jQAssistant JAX RS Plugin
 
 This is the JAX RS Plugin of https://www.jqassistant.org[jQAssistant^].
 It enables jQAssistant to scan and to analyze JAX RS related
