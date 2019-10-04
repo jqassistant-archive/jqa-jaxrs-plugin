@@ -33,9 +33,9 @@
     </licenses>
 
     <scm>
-        <connection>scm:git:git@github.com:buschmais/jqa-jaxrs-plugin.git</connection>
-        <developerConnection>scm:git:git@github.com:buschmais/jqa-jaxrs-plugin.git</developerConnection>
-        <url>https://github.com/buschmais/jqa-jaxrs-plugin</url>
+        <connection>scm:git:git@github.com:jqassistant/jqa-jaxrs-plugin.git</connection>
+        <developerConnection>scm:git:git@github.com:jqassistant/jqa-jaxrs-plugin.git</developerConnection>
+        <url>https://github.com/jqassistant/jqa-jaxrs-plugin</url>
       <tag>HEAD</tag>
   </scm>
 
