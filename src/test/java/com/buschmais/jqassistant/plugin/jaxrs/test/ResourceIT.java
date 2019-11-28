@@ -10,7 +10,7 @@ import static com.buschmais.jqassistant.core.report.api.model.Result.Status.SUCC
 import static com.buschmais.jqassistant.plugin.java.test.matcher.TypeDescriptorMatcher.typeDescriptor;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.hasItem;
-import static org.hamcrest.core.IsNull.nullValue;
+import static org.hamcrest.Matchers.empty;
 import static org.junit.Assert.assertThat;
 
 /**
@@ -52,7 +52,7 @@ public class ResourceIT extends AbstractJavaPluginIT {
         scanClasses(ResourceIT.class);
         assertThat(applyConcept("jaxrs:Resource").getStatus(), equalTo(FAILURE));
         store.beginTransaction();
-        assertThat("Unexpected RestResource", query("MATCH (getResource:JaxRS:Resource) RETURN getResource").getColumn("getResource"), nullValue());
+        assertThat("Unexpected RestResource", query("MATCH (getResource:JaxRS:Resource) RETURN getResource").getRows(), empty());
         store.commitTransaction();
 
     }

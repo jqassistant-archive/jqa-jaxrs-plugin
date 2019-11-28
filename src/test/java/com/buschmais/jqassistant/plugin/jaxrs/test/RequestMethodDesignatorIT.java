@@ -16,7 +16,7 @@ import static com.buschmais.jqassistant.core.report.api.model.Result.Status.SUCC
 import static com.buschmais.jqassistant.plugin.java.test.matcher.TypeDescriptorMatcher.typeDescriptor;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.hasItem;
-import static org.hamcrest.core.IsNull.nullValue;
+import static org.hamcrest.Matchers.empty;
 import static org.junit.Assert.assertThat;
 
 /**
@@ -75,7 +75,7 @@ public class RequestMethodDesignatorIT extends AbstractJavaPluginIT {
         assertThat(applyConcept("jaxrs:RequestMethodDesignator").getStatus(), equalTo(FAILURE));
         store.beginTransaction();
         assertThat("Unexpected RequestMethodDesignator",
-                query("MATCH (methodDesignator:JaxRS:RequestMethodDesignator) RETURN methodDesignator").getColumn("methodDesignator"), nullValue());
+                query("MATCH (methodDesignator:JaxRS:RequestMethodDesignator) RETURN methodDesignator").getRows(), empty());
         store.commitTransaction();
     }
 
