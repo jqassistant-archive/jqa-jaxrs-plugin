@@ -10,11 +10,11 @@ import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
-import javax.xml.ws.Response;
+import javax.ws.rs.core.Response;
 
 /**
  * A simple REST resource.
- * 
+ *
  * @author Aparna Chaudhary
  */
 @Path("/")
@@ -47,7 +47,7 @@ public interface MyRestResource {
 
     @OPTIONS
     @Path("/testOptions")
-    Response<String> testOptions();
+    Response testOptions();
 
     @Path("/subResource/{id}")
     MySubResource getMySubResource(@PathParam("id") String id);
