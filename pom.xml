@@ -4,13 +4,13 @@
     <parent>
         <groupId>com.buschmais.jqassistant.plugin</groupId>
         <artifactId>parent</artifactId>
-        <version>1.10.0-ALPHA1</version>
+        <version>1.10.0-SNAPSHOT</version>
         <relativePath/>
     </parent>
 
     <groupId>com.buschmais.jqassistant.plugin</groupId>
     <artifactId>jaxrs</artifactId>
-    <version>1.10.0-ALPHA1</version>
+    <version>1.10.0-SNAPSHOT</version>
 
     <name>jQAssistant JAX RS Plugin</name>
     <url>http://jqassistant.org/</url>
@@ -41,8 +41,8 @@
   </scm>
 
     <properties>
-        <jqa-java-plugin.version>1.10.0-ALPHA1</jqa-java-plugin.version>
-        <jqa-plugin-common.version>1.10.0-ALPHA1</jqa-plugin-common.version>
+        <jqa-java-plugin.version>1.10.0-SNAPSHOT</jqa-java-plugin.version>
+        <jqa-plugin-common.version>1.10.0-SNAPSHOT</jqa-plugin-common.version>
         <asciidoctor.toplevelid>jaxrs-plugin</asciidoctor.toplevelid>
     </properties>
 
