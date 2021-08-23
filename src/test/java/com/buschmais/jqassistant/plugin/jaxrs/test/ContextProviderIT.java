@@ -18,7 +18,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
  *
  * @author Aparna Chaudhary
  */
-public class ContextProviderIT extends AbstractJavaPluginIT {
+class ContextProviderIT extends AbstractJavaPluginIT {
 
     /**
      * Verifies the concept {@code jaxrs:ContextProvider} for
@@ -30,7 +30,7 @@ public class ContextProviderIT extends AbstractJavaPluginIT {
      *             If the test fails.
      */
     @Test
-    public void contextProvider_Concept() throws Exception {
+    void contextProvider_Concept() throws Exception {
         scanClasses(BookResolver.class);
         assertThat(applyConcept("jaxrs:ContextProvider").getStatus(), equalTo(SUCCESS));
         store.beginTransaction();

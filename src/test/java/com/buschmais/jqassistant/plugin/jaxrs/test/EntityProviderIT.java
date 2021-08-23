@@ -20,7 +20,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
  *
  * @author Aparna Chaudhary
  */
-public class EntityProviderIT extends AbstractJavaPluginIT {
+class EntityProviderIT extends AbstractJavaPluginIT {
 
     /**
      * Verifies the concept {@code jaxrs:EntityProvider} for
@@ -32,7 +32,7 @@ public class EntityProviderIT extends AbstractJavaPluginIT {
      *             If the test fails.
      */
     @Test
-    public void entityProviderWriterConcept() throws Exception {
+    void entityProviderWriterConcept() throws Exception {
         scanClasses(BookWriter.class);
         assertThat(applyConcept("jaxrs:EntityProvider").getStatus(), equalTo(SUCCESS));
         store.beginTransaction();
@@ -51,7 +51,7 @@ public class EntityProviderIT extends AbstractJavaPluginIT {
      *             If the test fails.
      */
     @Test
-    public void entityProviderReaderConcept() throws Exception {
+    void entityProviderReaderConcept() throws Exception {
         scanClasses(BookReader.class);
         assertThat(applyConcept("jaxrs:EntityProvider").getStatus(), equalTo(SUCCESS));
         store.beginTransaction();

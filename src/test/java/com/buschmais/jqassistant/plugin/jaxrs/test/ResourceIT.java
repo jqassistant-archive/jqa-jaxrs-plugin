@@ -18,7 +18,7 @@ import static org.hamcrest.Matchers.empty;
  *
  * @author Aparna Chaudhary
  */
-public class ResourceIT extends AbstractJavaPluginIT {
+class ResourceIT extends AbstractJavaPluginIT {
 
     /**
      * Verifies the concept {@code jaxrs:Resource}.
@@ -29,7 +29,7 @@ public class ResourceIT extends AbstractJavaPluginIT {
      *             If the test fails.
      */
     @Test
-    public void resourceConcept() throws Exception {
+    void resourceConcept() throws Exception {
         scanClasses(MyRestResource.class);
         assertThat(applyConcept("jaxrs:Resource").getStatus(), equalTo(SUCCESS));
         store.beginTransaction();
@@ -48,7 +48,7 @@ public class ResourceIT extends AbstractJavaPluginIT {
      *             If the test fails.
      */
     @Test
-    public void testInvalid_Resource_Concept() throws Exception {
+    void testInvalid_Resource_Concept() throws Exception {
         scanClasses(ResourceIT.class);
         assertThat(applyConcept("jaxrs:Resource").getStatus(), equalTo(FAILURE));
         store.beginTransaction();

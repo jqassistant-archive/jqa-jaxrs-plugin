@@ -15,7 +15,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
  *
  * @author Aparna Chaudhary
  */
-public class ResourceMethodIT extends AbstractJavaPluginIT {
+class ResourceMethodIT extends AbstractJavaPluginIT {
 
     /**
      * Verifies the concept {@code jaxrs:GetResourceMethod}.
@@ -26,7 +26,7 @@ public class ResourceMethodIT extends AbstractJavaPluginIT {
      *             If the test fails.
      */
     @Test
-    public void GetResourceMethodConcept() throws Exception {
+    void GetResourceMethodConcept() throws Exception {
         scanClasses(MyRestResource.class);
         assertThat(applyConcept("jaxrs:GetResourceMethod").getStatus(), equalTo(SUCCESS));
         store.beginTransaction();
@@ -44,7 +44,7 @@ public class ResourceMethodIT extends AbstractJavaPluginIT {
      *             If the test fails.
      */
     @Test
-    public void putResourceMethodConcept() throws Exception {
+    void putResourceMethodConcept() throws Exception {
         scanClasses(MyRestResource.class);
         assertThat(applyConcept("jaxrs:PutResourceMethod").getStatus(), equalTo(SUCCESS));
         store.beginTransaction();
@@ -62,7 +62,7 @@ public class ResourceMethodIT extends AbstractJavaPluginIT {
      *             If the test fails.
      */
     @Test
-    public void postResourceMethodConcept() throws Exception {
+    void postResourceMethodConcept() throws Exception {
         scanClasses(MyRestResource.class);
         assertThat(applyConcept("jaxrs:PostResourceMethod").getStatus(), equalTo(SUCCESS));
         store.beginTransaction();
@@ -80,7 +80,7 @@ public class ResourceMethodIT extends AbstractJavaPluginIT {
      *             If the test fails.
      */
     @Test
-    public void deleteResourceMethodConcept() throws Exception {
+    void deleteResourceMethodConcept() throws Exception {
         scanClasses(MyRestResource.class);
         assertThat(applyConcept("jaxrs:DeleteResourceMethod").getStatus(), equalTo(SUCCESS));
         store.beginTransaction();
@@ -98,7 +98,7 @@ public class ResourceMethodIT extends AbstractJavaPluginIT {
      *             If the test fails.
      */
     @Test
-    public void headResourceMethodConcept() throws Exception {
+    void headResourceMethodConcept() throws Exception {
         scanClasses(MyRestResource.class);
         assertThat(applyConcept("jaxrs:HeadResourceMethod").getStatus(), equalTo(SUCCESS));
         store.beginTransaction();
@@ -116,7 +116,7 @@ public class ResourceMethodIT extends AbstractJavaPluginIT {
      *             If the test fails.
      */
     @Test
-    public void optionsResourceMethodConcept() throws Exception {
+    void optionsResourceMethodConcept() throws Exception {
         scanClasses(MyRestResource.class);
         assertThat(applyConcept("jaxrs:OptionsResourceMethod").getStatus(), equalTo(SUCCESS));
         store.beginTransaction();
@@ -135,7 +135,7 @@ public class ResourceMethodIT extends AbstractJavaPluginIT {
      *             If the test fails.
      */
     @Test
-    public void subResourceLocatorConcept() throws Exception {
+    void subResourceLocatorConcept() throws Exception {
         scanClasses(MyRestResource.class);
         assertThat(applyConcept("jaxrs:SubResourceLocator").getStatus(), equalTo(SUCCESS));
         store.beginTransaction();
@@ -156,7 +156,7 @@ public class ResourceMethodIT extends AbstractJavaPluginIT {
      *             If the test fails.
      */
     @Test
-    public void invalidSubResourceLocatorConcept() throws Exception {
+    void invalidSubResourceLocatorConcept() throws Exception {
         scanClasses(MyRestResource.class);
         assertThat(applyConcept("jaxrs:SubResourceLocator").getStatus(), equalTo(SUCCESS));
         store.beginTransaction();

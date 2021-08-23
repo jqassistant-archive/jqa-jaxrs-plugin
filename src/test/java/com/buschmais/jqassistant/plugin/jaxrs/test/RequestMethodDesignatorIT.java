@@ -19,7 +19,7 @@ import static org.hamcrest.Matchers.empty;
  *
  * @author Aparna Chaudhary
  */
-public class RequestMethodDesignatorIT extends AbstractJavaPluginIT {
+class RequestMethodDesignatorIT extends AbstractJavaPluginIT {
 
     /**
      * Verifies the concept {@code jaxrs:RequestMethodDesignator}.
@@ -30,7 +30,7 @@ public class RequestMethodDesignatorIT extends AbstractJavaPluginIT {
      *             If the test fails.
      */
     @Test
-    public void requestMethodDesignatorConcept() throws Exception {
+    void requestMethodDesignatorConcept() throws Exception {
         scanClasses(GET.class, PUT.class, POST.class, DELETE.class, HEAD.class, OPTIONS.class);
         assertThat(applyConcept("jaxrs:RequestMethodDesignator").getStatus(), equalTo(SUCCESS));
         store.beginTransaction();
@@ -65,7 +65,7 @@ public class RequestMethodDesignatorIT extends AbstractJavaPluginIT {
      *             If the test fails.
      */
     @Test
-    public void testInvalid_RequestMethodDesignator_Concept() throws Exception {
+    void testInvalid_RequestMethodDesignator_Concept() throws Exception {
         scanClasses(Test.class);
         assertThat(applyConcept("jaxrs:RequestMethodDesignator").getStatus(), equalTo(FAILURE));
         store.beginTransaction();

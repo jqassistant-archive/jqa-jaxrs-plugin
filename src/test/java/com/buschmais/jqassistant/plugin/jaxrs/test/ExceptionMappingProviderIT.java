@@ -18,7 +18,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
  *
  * @author Aparna Chaudhary
  */
-public class ExceptionMappingProviderIT extends AbstractJavaPluginIT {
+class ExceptionMappingProviderIT extends AbstractJavaPluginIT {
 
     /**
      * Verifies the concept {@code jaxrs:ExceptionMappingProvider} for
@@ -30,7 +30,7 @@ public class ExceptionMappingProviderIT extends AbstractJavaPluginIT {
      *             If the test fails.
      */
     @Test
-    public void exceptionMappingProviderConcept() throws Exception {
+    void exceptionMappingProviderConcept() throws Exception {
         scanClasses(NotFoundExceptionMapper.class, BookResolver.class);
         assertThat(applyConcept("jaxrs:ExceptionMappingProvider").getStatus(), equalTo(SUCCESS));
         store.beginTransaction();
