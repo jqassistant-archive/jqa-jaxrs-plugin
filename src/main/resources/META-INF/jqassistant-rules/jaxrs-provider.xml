@@ -1,17 +1,19 @@
-<jqa:jqassistant-rules xmlns:jqa="http://www.buschmais.com/jqassistant/core/analysis/rules/schema/v1.0">
+<jqassistant-rules xmlns="http://schema.jqassistant.org/rule/v1.10"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://schema.jqassistant.org/rule/v1.10 http://schema.jqassistant.org/rule/jqassistant-rule-v1.10.xsd">
 
-	<concept id="jaxrs:EntityProvider">
-		<description>Finds classes that implement "javax.ws.rs.ext.MessageBodyReader" 
+<concept id="jaxrs:EntityProvider">
+		<description>Finds classes that implement "javax.ws.rs.ext.MessageBodyReader"
 		or "javax.ws.rs.ext.MessageBodyWriter" and labels them with 'JaxRS' and 'EntityProvider'
 		</description>
 		<cypher><![CDATA[
-            MATCH 
+            MATCH
               (c:Type:Class)-[:IMPLEMENTS]->(a:Type)
-            WHERE 
+            WHERE
               a.fqn IN ["javax.ws.rs.ext.MessageBodyReader", "javax.ws.rs.ext.MessageBodyWriter"]
-            SET 
+            SET
               c:JaxRS:EntityProvider
-            RETURN 
+            RETURN
               DISTINCT c AS EntityProvider
         ]]></cypher>
 	</concept>
@@ -20,13 +22,13 @@
 		<description>Finds classes that implement "javax.ws.rs.ext.ContextResolver" and labels them with 'JaxRS' and 'ContextProvider'
 		</description>
 		<cypher><![CDATA[
-            MATCH 
+            MATCH
               (c:Type:Class)-[:IMPLEMENTS]->(a:Type)
-            WHERE 
+            WHERE
               a.fqn = "javax.ws.rs.ext.ContextResolver"
-            SET 
+            SET
               c:JaxRS:ContextProvider
-            RETURN 
+            RETURN
               DISTINCT c AS ContextProvider
         ]]></cypher>
 	</concept>
@@ -35,15 +37,15 @@
 		<description>Finds classes that implement "javax.ws.rs.ext.ExceptionMapper" and labels them with 'JaxRS' and 'ExceptionMappingProvider'
 		</description>
 		<cypher><![CDATA[
-            MATCH 
+            MATCH
               (c:Type:Class)-[:IMPLEMENTS]->(a:Type)
-            WHERE 
+            WHERE
               a.fqn = "javax.ws.rs.ext.ExceptionMapper"
-            SET 
+            SET
               c:JaxRS:ExceptionMappingProvider
-            RETURN 
+            RETURN
               DISTINCT c AS ExceptionMappingProvider
         ]]></cypher>
 	</concept>
-	
-</jqa:jqassistant-rules>
+
+</jqassistant-rules>

@@ -1,10 +1,12 @@
-<jqa:jqassistant-rules xmlns:jqa="http://www.buschmais.com/jqassistant/core/analysis/rules/schema/v1.0">
+<jqassistant-rules xmlns="http://schema.jqassistant.org/rule/v1.10"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://schema.jqassistant.org/rule/v1.10 http://schema.jqassistant.org/rule/jqassistant-rule-v1.10.xsd">
 
-	<concept id="jaxrs:RequestMethodDesignator">
+<concept id="jaxrs:RequestMethodDesignator">
 		<description>Finds request method designator annotations (i.e. @GET, @POST, @PUT, @DELETE, @HEAD, @OPTIONS) and labels them with 'JaxRS' and 'RequestMethodDesignator'
 		</description>
 		<cypher><![CDATA[
-            MATCH 
+            MATCH
               (a:Type)
             WHERE
               a.fqn IN ["javax.ws.rs.GET", "javax.ws.rs.POST", "javax.ws.rs.PUT", "javax.ws.rs.DELETE", "javax.ws.rs.HEAD", "javax.ws.rs.OPTIONS"]
@@ -17,7 +19,7 @@
 
 	<concept id="jaxrs:Resource">
 		<requiresConcept refId="jaxrs:RequestMethodDesignator" />
-		<description>Finds classes or interfaces with atleast one method annotated with "@javax.ws.rs.Path" or with request method designator 
+		<description>Finds classes or interfaces with atleast one method annotated with "@javax.ws.rs.Path" or with request method designator
 		(i.e. @GET, @POST, @PUT, @DELETE, @HEAD, @OPTIONS) and labels them with 'JaxRS' and 'Resource'.
 		</description>
 		<cypher><![CDATA[
@@ -36,7 +38,7 @@
 
 	<concept id="jaxrs:SubResourceLocator">
 		<requiresConcept refId="jaxrs:RequestMethodDesignator" />
-		<description>Finds classes or interfaces with method annotated with "@javax.ws.rs.Path" but no request method designator 
+		<description>Finds classes or interfaces with method annotated with "@javax.ws.rs.Path" but no request method designator
 		and no entity parameters and labels the methods with 'JaxRS' and 'SubResourceLocator'.
 		</description>
 		<cypher><![CDATA[
@@ -59,7 +61,7 @@
 
 	<concept id="jaxrs:ResourceMethod">
 		<requiresConcept refId="jaxrs:Resource" />
-		<description>Finds methods that belong to resource class or interface and annotated with request method designator 
+		<description>Finds methods that belong to resource class or interface and annotated with request method designator
 		(i.e. @GET, @POST, @PUT, @DELETE, @HEAD, @OPTIONS) and labels them with 'JaxRS' and 'ResourceMethod'.
 		</description>
 		<cypher><![CDATA[
@@ -161,5 +163,5 @@
               m AS OptionsMethod
         ]]></cypher>
 	</concept>
-	
-</jqa:jqassistant-rules>
+
+</jqassistant-rules>
