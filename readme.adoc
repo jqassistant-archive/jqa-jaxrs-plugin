@@ -1,6 +1,6 @@
 = jQAssistant JAX RS Plugin
 
-This is the JAX RS Plugin of https://www.jqassistant.org[jQAssistant^].
+This is the JAX RS Plugin of https://jqassistant.org[jQAssistant^].
 It enables jQAssistant to scan and to analyze JAX RS related
 artifacts like:
 
@@ -10,4 +10,4 @@ artifacts like:
 - ...
 
 
-For more information on jQAssistant see https://www.jqassistant.org[^].
+For more information on jQAssistant see https://jqassistant.org[^].
