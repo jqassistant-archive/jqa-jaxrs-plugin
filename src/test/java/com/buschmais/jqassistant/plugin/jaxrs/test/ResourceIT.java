@@ -5,8 +5,8 @@ import com.buschmais.jqassistant.plugin.jaxrs.test.set.beans.MyRestResource;
 
 import org.junit.jupiter.api.Test;
 
-import static com.buschmais.jqassistant.core.report.api.model.Result.Status.FAILURE;
 import static com.buschmais.jqassistant.core.report.api.model.Result.Status.SUCCESS;
+import static com.buschmais.jqassistant.core.report.api.model.Result.Status.WARNING;
 import static com.buschmais.jqassistant.plugin.java.test.matcher.TypeDescriptorMatcher.typeDescriptor;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.hasItem;
@@ -50,7 +50,7 @@ class ResourceIT extends AbstractJavaPluginIT {
     @Test
     void testInvalid_Resource_Concept() throws Exception {
         scanClasses(ResourceIT.class);
-        assertThat(applyConcept("jaxrs:Resource").getStatus(), equalTo(FAILURE));
+        assertThat(applyConcept("jaxrs:Resource").getStatus(), equalTo(WARNING));
         store.beginTransaction();
         assertThat("Unexpected RestResource", query("MATCH (getResource:JaxRS:Resource) RETURN getResource").getRows(), empty());
         store.commitTransaction();

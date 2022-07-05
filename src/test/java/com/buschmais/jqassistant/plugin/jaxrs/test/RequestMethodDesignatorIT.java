@@ -6,8 +6,7 @@ import com.buschmais.jqassistant.plugin.java.test.AbstractJavaPluginIT;
 
 import org.junit.jupiter.api.Test;
 
-import static com.buschmais.jqassistant.core.report.api.model.Result.Status.FAILURE;
-import static com.buschmais.jqassistant.core.report.api.model.Result.Status.SUCCESS;
+import static com.buschmais.jqassistant.core.report.api.model.Result.Status.*;
 import static com.buschmais.jqassistant.plugin.java.test.matcher.TypeDescriptorMatcher.typeDescriptor;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.hasItem;
@@ -67,7 +66,7 @@ class RequestMethodDesignatorIT extends AbstractJavaPluginIT {
     @Test
     void testInvalid_RequestMethodDesignator_Concept() throws Exception {
         scanClasses(Test.class);
-        assertThat(applyConcept("jaxrs:RequestMethodDesignator").getStatus(), equalTo(FAILURE));
+        assertThat(applyConcept("jaxrs:RequestMethodDesignator").getStatus(), equalTo(WARNING));
         store.beginTransaction();
         assertThat("Unexpected RequestMethodDesignator",
                 query("MATCH (methodDesignator:JaxRS:RequestMethodDesignator) RETURN methodDesignator").getRows(), empty());
